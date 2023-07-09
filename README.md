@@ -1,6 +1,6 @@
-# Vite React Movie App
+# Vite React eCommerce App
 
-This is a sample Vite React app that demonstrates a movie search functionality.
+This is a sample Vite React app that demonstrates an eCommerce website.
 
 ## Getting Started
 
@@ -18,18 +18,38 @@ Make sure you have the following software installed on your machine:
 1. Clone the repository to your local machine:
 
    ```shell
-   git clone git@github.com:bitcoinkash/netflix-app.git
+   git clone git@github.com:bitcoinkash/ecommerce-app.git
 
-   Running the App
+### Install the dependencies:
 
-   npm run dev
+cd ecommerce-app
+npm install
 
-   Explore the Movie App:
+### Running the App
+To run the eCommerce app, use the following command:
+npm run dev
 
-Explore the Movie App:
 
-The app provides a simple interface to search for movies. Enter a movie title in the search bar and press Enter or click the search button. The app will display a list of movies matching the search query.
+Exploring the eCommerce App 
+The app provides an eCommerce experience, allowing users to browse and purchase products. Some feature are upcoming!
+
+Product Listings: Browse through a wide range of products with detailed descriptions, pricing, and images.
+
+Product Search: Use the search bar to quickly find specific products by their name, category, or any other relevant keywords.
+
+Shopping Cart: Add products to your shopping cart, review the items, adjust quantities, and proceed to checkout.
+
+User Authentication: Sign up or log in to your account to access additional features, such as saved payment methods and order history.
+
+Payment Processing: Securely process payments using various payment methods, ensuring a smooth and safe checkout experience.
+
+Order Management: View and manage your orders, track shipment status, and get notifications on order updates.
 
 Development Mode:
 
 The development server supports hot module replacement, meaning you can edit the code and see the changes reflected instantly in the browser without a full page reload.
+
+Feel free to explore and modify the app to suit your eCommerce requirements.
+
+Happy shopping!
+
