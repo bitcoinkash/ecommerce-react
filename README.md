@@ -1,3 +1,6 @@
+Apologies for the formatting issues. Here's the corrected version of the README.md:
+
+```markdown
 # Vite React eCommerce App
 
 This is a sample Vite React app that demonstrates an eCommerce website.
@@ -19,38 +22,40 @@ Make sure you have the following software installed on your machine:
 
    ```shell
    git clone git@github.com:bitcoinkash/ecommerce-app.git
+   ```
 
-### Install the dependencies:
+2. Install the dependencies:
 
-  ```shell
-
-cd ecommerce-app
-
-npm install
+   ```shell
+   cd ecommerce-app
+   npm install
+   ```
 
 ### Running the App
 
-
 To run the eCommerce app, use the following command:
 
-  ```shell
+```shell
 npm run dev
+```
 
+This will start the development server and launch the app in your browser.
 
-Exploring the eCommerce App 
-The app provides an eCommerce experience, allowing users to browse and purchase products. Some feature are upcoming!
+### Exploring the eCommerce App
 
-Product Listings: Browse through a wide range of products with detailed descriptions, pricing, and images.
+The app provides an eCommerce experience, allowing users to browse and purchase products. Some features are upcoming!
 
-Product Search: Use the search bar to quickly find specific products by their name, category, or any other relevant keywords.
+- **Product Listings**: Browse through a wide range of products with detailed descriptions, pricing, and images.
 
-Shopping Cart: Add products to your shopping cart, review the items, adjust quantities, and proceed to checkout.
+- **Product Search**: Use the search bar to quickly find specific products by their name, category, or any other relevant keywords.
 
-User Authentication: Sign up or log in to your account to access additional features, such as saved payment methods and order history.
+- **Shopping Cart**: Add products to your shopping cart, review the items, adjust quantities, and proceed to checkout.
 
-Payment Processing: Securely process payments using various payment methods, ensuring a smooth and safe checkout experience.
+- **User Authentication**: Sign up or log in to your account to access additional features, such as saved payment methods and order history.
 
-Order Management: View and manage your orders, track shipment status, and get notifications on order updates.
+- **Payment Processing**: Securely process payments using various payment methods, ensuring a smooth and safe checkout experience.
+
+- **Order Management**: View and manage your orders, track shipment status, and get notifications on order updates.
 
 Development Mode:
 
@@ -59,4 +64,6 @@ The development server supports hot module replacement, meaning you can edit the
 Feel free to explore and modify the app to suit your eCommerce requirements.
 
 Happy shopping!
+```
 
+Please copy and paste this version into your VS Code.
