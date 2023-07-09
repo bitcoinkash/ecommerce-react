@@ -2,60 +2,67 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./App.css";
 import SearchIcon from "./search.svg";
-import MovieCard from "./MovieCard";
+import ProductCard from "./ProductCard";
 
 
-const API_URL = "http://www.omdbapi.com/?apikey=15d7d295";
+const API_URL = "https://fakestoreapi.com/products";
 
-const movie1 = {
-  Title: "The Matrix Revisited",
-  Year: "2001",
-  imdbID: "tt0295432",
-  Type: "movie",
-  Poster:
-    "https://m.media-amazon.com/images/M/MV5BMTkzNjg3NjE4N15BMl5BanBnXkFtZTgwNTc3NTAwNzE@._V1_SX300.jpg",
-};
+// const movie1 = {
+//   Title: "The Matrix Revisited",
+//   Year: "2001",
+//   imdbID: "tt0295432",
+//   Type: "movie",
+//   Poster:
+//     "https://m.media-amazon.com/images/M/MV5BMTkzNjg3NjE4N15BMl5BanBnXkFtZTgwNTc3NTAwNzE@._V1_SX300.jpg",
+// };
 
 function App() {
-  const [movies, setMovies] = useState([]);
+  const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const searchMovies = async (title) => {
-    const res = await fetch(`${API_URL}&s=${title}`);
-    const data = await res.json();
-    setMovies(data.Search);
+  const searchProducts = async (title) => {
+    try {
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      const filteredProducts = data.filter((product) =>
+        product.title.toLowerCase().includes(title.toLowerCase())
+      );
+      setProducts(filteredProducts);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    searchMovies("Matrix");
+    searchProducts("");
   }, []);
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1>Buy Clothes</h1>
 
       <div className="search">
         <input
           type="text"
-          placeholder="Search for movies"
+          placeholder="Search for products"
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         />
         <img 
         src={SearchIcon} 
         alt="Search" 
-        onClick={() => searchMovies(searchTerm)} />
+        onClick={() => searchProducts(searchTerm)} />
       </div>
 
-      {movies?.length > 0 ? (
+      {products.length > 0 ? (
         <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
+          {products.map((product) => (
+            <ProductCard product={product} />
           ))}
         </div>
       ) : (
         <div className="empty">
-          <h2>No movies found</h2>
+          <h2>No products found</h2>
         </div>
       )}
     </div>
