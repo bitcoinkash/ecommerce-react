@@ -22,11 +22,18 @@ Make sure you have the following software installed on your machine:
 
 ### Install the dependencies:
 
+  ```shell
+
 cd ecommerce-app
+
 npm install
 
 ### Running the App
+
+
 To run the eCommerce app, use the following command:
+
+  ```shell
 npm run dev
 
 
